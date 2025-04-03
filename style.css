@@ -1,0 +1,120 @@
+*
+{
+    padding:0;
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+body
+{
+    background:rgba(29, 29, 162, 0.415);
+}
+.container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* align-content: center; */
+    margin-top:60px;
+    border:3px solid black;
+    width:50%;
+    margin: 60px auto;
+    padding:10px 0px;
+    border-radius:15px;
+    background-color: rgba(245, 249, 253, 0.55);
+}
+.input-field
+{
+    padding:5px 30px;
+    position: relative;
+    left:-30px;
+}
+#input
+{
+    border-radius:20px;
+    border:0.9px solid black;
+    height:8vh;
+    width:25vw;
+    margin-left:50px;
+    padding:0px 15px;
+    font-size: 1rem;
+    font-weight: 300;
+    outline: none;
+}
+#add-btn
+{
+    border-radius:25px;
+    border:0.9px solid black;
+    height:8vh;
+    width:8vw;
+    position:absolute;
+    right:5px;
+    background-color: rgb(248, 157, 0);
+    color:white;
+    font-weight: bolder;
+    font-size: 1.1rem;
+}
+#add-btn:hover,li{
+    cursor: pointer;
+}
+span
+{
+    background-color:whitesmoke;
+    color:cornflowerblue;
+    font-weight:300;
+    cursor:auto;
+}
+ul
+{
+    display: flex;
+    flex-direction: column-reverse;
+}
+li
+{
+    /* user-select: none; */
+    list-style-type: none;
+    background-color:whitesmoke;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    padding:5px 8px;
+    border:1px solid black;
+    width:325px;
+    margin:5px 0px 10px 0.8em;
+    font-weight: 100;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    appearance: none; /* Removes default styling */
+    border-radius:10px;
+    border:1px solid black;
+    cursor: pointer;
+    padding:2px;
+    background-clip: content-box;
+    
+}
+input[type="checkbox"]:checked
+{
+    background-color: rgb(0, 145, 255);
+}
+button
+{
+    background-color: white;
+    border:none;
+    cursor:pointer;
+}
+
+
+#edit{
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size:1rem;
+    text-align: center;
+    font-family: inherit;
+}
