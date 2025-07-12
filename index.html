@@ -3,106 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Do list</title>
-    <style>
-        body
-        {
-            margin:0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        .todo-list
-        {
-            display:flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            font-size: 2rem;
-        }
-        #title
-        {
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-        .input-box
-        {
-            display:flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-        }
-        #inputTask
-        {
-            margin:2px;
-            /* margin-bottom:3px; */
-            padding:3px 5px;
-            width:200px;
-            height:25px;
-        }
-        #addTask
-        {
-            width:fit-content;
-            height:33px;
-            background-color:rgb(21, 55, 203);
-            border: 1px solid black;
-            border-radius: 5px;
-            color:white;
-            font-weight: 600;
-        }
-        ul
-        {
-            display: flex;
-            flex-direction: column;
-            justify-content: start;
-            margin-top:3px;
-        }
-        li
-        {
-            background-color:rgb(21, 55, 203);
-            color:white;
-            margin-bottom:5px;
-            height:20px;
-            width:210px;
-            font-size:1rem;
-            padding:5px;
-            margin-right:110px;
-            margin-top:0px;
-        }
-    </style>
+    <title>Basic To-Do List</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="todo-list">
-        <span id="title">To Do List</span>
-        <div class="input-box">
-            <input type="text" placeholder="Enter Task" id="inputTask">
-            <button id="addTask" onclick="addTask()">Add Task</button>
+    <div class="container">
+        <h1>To-Do List </h1>
+        <div class="input-field">
+            <input type="text" id="input" placeholder="Enter Task">
+            <button id="add-btn">Add</button>
         </div>
-        <ul class="taskList" id="list"></ul>
+        <div class="taskField">
+            <ul class="taskList" id="taskList"></ul>
+        </div>
     </div>
-    <script>
-        function addTask()
-        {
-            let taskInput=document.getElementById('inputTask');
-            let taskName=taskInput.value.trim();
-            let taskList=document.getElementById("list");
-            let li=document.createElement('li');
-            // console.log(taskName);
-            if(taskName=='')
-             {
-                alert('Enter Task Name');
-             }
-             else
-             {
-            li.textContent=taskName;
-            document.querySelector('.taskList').appendChild(li);
-            taskInput.value='';
-             }
-             
-             li.onclick=function()
-             {
-                this.remove();
-             }
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
